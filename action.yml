@@ -1,5 +1,8 @@
 name: 'Clasp Action'
 description: 'Push or deploy to Google Apps Script using clasp'
+branding:
+  icon: 'arrow-up-circle'
+  color: 'blue'
 inputs:
   accessToken:
     description: 'access_token written in .clasprc.json'
