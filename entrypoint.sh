@@ -39,17 +39,6 @@ fi
 
 echo $CLASP > .clasp.json
 
-CLASPIGNORE=$(cat <<-END
-    **/**
-    !*.js
-    !*.ts
-    !*.html
-    !appsscript.json
-END
-)
-
-echo $CLASPIGNORE > .claspignore
-
 if [ "$8" = "push" ]; then
   clasp push
 elif  [ "$8" = "deploy" ]; then
