@@ -1,0 +1,43 @@
+name: 'Clasp Action'
+description: 'Push or deploy to Google Apps Script using clasp'
+inputs:
+  accessToken:
+    description: 'access_token written in .clasprc.json'
+    required: true
+  idToken:
+    description: 'id_token written in .clasprc.json'
+    required: true
+  refreshToken:
+    description: 'refresh_token written in .clasprc.json'
+    required: true
+  clientId:
+    description: 'clientId written in .clasprc.json'
+    required: true
+  clientSecret:
+    description: 'clientSecret written in .clasprc.json'
+    required: true
+  scriptId:
+    description: 'scriptId written in .clasp.json'
+    required: true
+  rootDir:
+    description: 'Directory where scripts are stored'
+    required: false
+  command:
+    description: 'Command to execute(push or deploy)'
+    required: true
+  description:
+    description: 'Description of the deployment'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.accessToken }}
+    - ${{ inputs.idToken }} 
+    - ${{ inputs.refreshToken }}
+    - ${{ inputs.clientId }}
+    - ${{ inputs.clientSecret }}
+    - ${{ inputs.scriptId }}
+    - ${{ inputs.rootDir }}
+    - ${{ inputs.command }}
+    - ${{ inputs.description }}
