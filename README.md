@@ -99,3 +99,7 @@ Description of the deployment.
     rootDir: 'src'
     command: 'push'
 ```
+
+## License summary
+
+This code is made available under the MIT license.
