@@ -1,6 +1,6 @@
 # Clasp Action
 
-This action uses [clasp](https://github.com/google/clasp) to push or deploy to [Google Apps Script](https://developers.google.com/apps-script/).
+This action uses [clasp](https://github.com/google/clasp) to push or deploy to [Google Apps Script](https://developers.google.com/apps-script/). This action is running `clasp push -f` regardless of whether you select `push` or `deploy` as the command. This will force the remote manifest to be overwritten.
 
 ## Inputs
 
@@ -35,6 +35,8 @@ Directory where scripts are stored.
 ### `command`
 
 **Required** Command to execute(`push` or `deploy`).
+
+If `deploy` is selected, this action is running `clasp push -f` just before.
 
 ### `description`
 
