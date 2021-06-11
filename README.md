@@ -38,6 +38,9 @@ Directory where scripts are stored.
 
 If `deploy` is selected, this action is running `clasp push -f` just before.
 
+Deploy works for max. 20 deployments due to Gas limit on active deployments and complexity to determine which deployment should be deleted.
+Workaround : Archive manually all your unecessary deployments. [If you want to fix this](https://github.com/daikikatsuragawa/clasp-action/issues/1)
+
 ### `description`
 
 Description of the deployment.
