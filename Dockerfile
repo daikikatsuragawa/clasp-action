@@ -1,8 +1,8 @@
-FROM alpine:3.10
+FROM alpine:latest
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN apk add npm
+RUN apk add --update npm
 
 RUN npm install -g @google/clasp
 
