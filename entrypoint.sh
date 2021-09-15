@@ -41,13 +41,23 @@ echo $CLASP > .clasp.json
 
 if [ "$8" = "push" ]; then
   clasp push -f
-elif  [ "$8" = "deploy" ]; then
+elif [ "$8" = "deploy" ]; then
   if [ -n "$9" ]; then
     clasp push -f
-    clasp deploy --description "$9"
-  else 
+
+    if [ -n "${10}" ]; then
+      clasp deploy --description $9 -i ${10}
+    else
+      clasp deploy --description $9
+    fi
+  else
     clasp push -f
-    clasp deploy
+
+    if [ -n "${10}" ]; then
+      clasp deploy -i ${10}
+    else
+      clasp deploy
+    fi
   fi
 else
   echo "command is invalid."
