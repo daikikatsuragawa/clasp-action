@@ -31,12 +31,15 @@ inputs:
   description:
     description: 'Description of the deployment'
     required: false
+  deployId:
+    description: 'Deploy ID that will be updated'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.accessToken }}
-    - ${{ inputs.idToken }} 
+    - ${{ inputs.idToken }}
     - ${{ inputs.refreshToken }}
     - ${{ inputs.clientId }}
     - ${{ inputs.clientSecret }}
@@ -44,3 +47,4 @@ runs:
     - ${{ inputs.rootDir }}
     - ${{ inputs.command }}
     - ${{ inputs.description }}
+    - ${{ inputs.deployId }}

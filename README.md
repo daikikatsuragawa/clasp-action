@@ -45,6 +45,10 @@ Workaround : Archive manually all your unecessary deployments. [If you want to f
 
 Description of the deployment.
 
+### `deployId`
+
+Deploy ID that will be updated with this push.
+
 ## Example usage
 
 ### Case to push
@@ -104,6 +108,22 @@ Description of the deployment.
     rootDir: 'src'
     command: 'push'
 ```
+
+### Case to update a specific deploy
+
+```yaml
+- uses: daikikatsuragawa/clasp-action@v1
+  with:
+    accessToken: ${{ secrets.ACCESS_TOKEN }}
+    idToken: ${{ secrets.ID_TOKEN }}
+    refreshToken: ${{ secrets.REFRESH_TOKEN }}
+    clientId: ${{ secrets.CLIENT_ID }}
+    clientSecret: ${{ secrets.CLIENT_SECRET }}
+    scriptId: ${{ secrets.SCRIPT_ID }}
+    command: 'deploy'
+    deployId: ${{ secrets.DEPLOY_ID }}
+```
+
 
 ## License summary
 
