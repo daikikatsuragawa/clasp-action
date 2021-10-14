@@ -39,7 +39,7 @@ Directory where scripts are stored.
 If `deploy` is selected, this action is running `clasp push -f` just before.
 
 Deploy works for max. 20 deployments due to Gas limit on active deployments and complexity to determine which deployment should be deleted.
-Workaround : Archive manually all your unecessary deployments. [If you want to fix this](https://github.com/daikikatsuragawa/clasp-action/issues/1)
+Workaround : Set deployId.
 
 ### `description`
 
@@ -54,7 +54,7 @@ Deploy ID that will be updated with this push.
 ### Case to push
 
 ```yaml
-- uses: daikikatsuragawa/clasp-action@v1
+- uses: daikikatsuragawa/clasp-action@v1.1.0
   with:
     accessToken: ${{ secrets.ACCESS_TOKEN }}
     idToken: ${{ secrets.ID_TOKEN }}
@@ -68,7 +68,7 @@ Deploy ID that will be updated with this push.
 ### Case to deploy
 
 ```yaml
-- uses: daikikatsuragawa/clasp-action@v1
+- uses: daikikatsuragawa/clasp-action@v1.1.0
   with:
     accessToken: ${{ secrets.ACCESS_TOKEN }}
     idToken: ${{ secrets.ID_TOKEN }}
@@ -82,7 +82,7 @@ Deploy ID that will be updated with this push.
 ### Case to deploy with description
 
 ```yaml
-- uses: daikikatsuragawa/clasp-action@v1
+- uses: daikikatsuragawa/clasp-action@v1.1.0
   with:
     accessToken: ${{ secrets.ACCESS_TOKEN }}
     idToken: ${{ secrets.ID_TOKEN }}
@@ -97,7 +97,7 @@ Deploy ID that will be updated with this push.
 ### Case to specify the directory where scripts are stored
 
 ```yaml
-- uses: daikikatsuragawa/clasp-action@v1
+- uses: daikikatsuragawa/clasp-action@v1.1.0
   with:
     accessToken: ${{ secrets.ACCESS_TOKEN }}
     idToken: ${{ secrets.ID_TOKEN }}
@@ -112,7 +112,7 @@ Deploy ID that will be updated with this push.
 ### Case to update a specific deploy
 
 ```yaml
-- uses: daikikatsuragawa/clasp-action@v1
+- uses: daikikatsuragawa/clasp-action@v1.1.0
   with:
     accessToken: ${{ secrets.ACCESS_TOKEN }}
     idToken: ${{ secrets.ID_TOKEN }}
@@ -123,7 +123,6 @@ Deploy ID that will be updated with this push.
     command: 'deploy'
     deployId: ${{ secrets.DEPLOY_ID }}
 ```
-
 
 ## License summary
 
