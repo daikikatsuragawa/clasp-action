@@ -18,7 +18,7 @@ This action uses [clasp](https://github.com/google/clasp) to push or deploy to [
 
 ### `clientId`
 
-**Required** `refresh_token` written in `.clasprc.json`.
+**Required** `clientId` written in `.clasprc.json`.
 
 ### `clientSecret`
 
