@@ -41,6 +41,8 @@ echo $CLASP > .clasp.json
 
 if [ "$8" = "push" ]; then
   clasp push -f
+elif [ "$8" = "pull" ]; then
+  clasp pull
 elif [ "$8" = "deploy" ]; then
   if [ -n "$9" ]; then
     clasp push -f
