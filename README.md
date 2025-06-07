@@ -65,6 +65,20 @@ Deploy ID that will be updated with this push.
     command: 'push'
 ```
 
+### Case to pull
+
+```yaml
+- uses: daikikatsuragawa/clasp-action@v1.1.0
+  with:
+    accessToken: ${{ secrets.ACCESS_TOKEN }}
+    idToken: ${{ secrets.ID_TOKEN }}
+    refreshToken: ${{ secrets.REFRESH_TOKEN }}
+    clientId: ${{ secrets.CLIENT_ID }}
+    clientSecret: ${{ secrets.CLIENT_SECRET }}
+    scriptId: ${{ secrets.SCRIPT_ID }}
+    command: 'pull'
+```
+
 ### Case to deploy
 
 ```yaml
